@@ -1,5 +1,15 @@
 /* style.css */
 
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+    pointer-events: none;
+}
 /* Navbar Styles */
 .navbar {
     width: 100%;
@@ -537,18 +547,17 @@ footer {
     margin-top: 10px;
 }
 
-/* Floating Circles */
+/* Floating Circles
 .circles {
-    position: fixed; /* change from absolute */
+    position: fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
     top: 0;
     left: 0;
     z-index: 0;
-    pointer-events: none; /* prevent blocking clicks */
+    pointer-events: none;
 }
-
 
 .circle {
     position: absolute;
@@ -579,6 +588,7 @@ footer {
     left: 20%;
 }
 
+*/
 
 @keyframes float {
     0% {
@@ -641,3 +651,5 @@ footer {
         transform: scale(1);
     }
 }
+
+
