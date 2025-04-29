@@ -20,7 +20,8 @@
     <meta name="twitter:image" content="https://flyingmermaidd.github.io/portfolio/assets/images/preview-image.jpg">
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+    <link href="https://unpkg.com/vis-network/styles/vis-network.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>    
 </head>
 <body>
     <div id="particles-js"></div>
@@ -83,6 +84,13 @@
 <!-- Skills Section -->
 <section id="skills">
     <div class="container fade-in-section">
+      <h2>Skills</h2>
+      <div id="skillGraph" style="height: 500px;"></div>
+    </div>
+  </section>  
+<!--
+<section id="skills">
+    <div class="container fade-in-section">
         <h2>Skills</h2>
         <div class="skills-grid">
             <div class="skill-card core-skill">Python</div>
@@ -98,8 +106,8 @@
             <div class="skill-card">Data Modeling</div>
             <div class="skill-card">Predictive Analytics</div>
         </div>
-    </div>
-</section>
+    </div> 
+</section> -->
 <!-- Projects Section -->
 <section id="projects">
     <div class="container fade-in-section">

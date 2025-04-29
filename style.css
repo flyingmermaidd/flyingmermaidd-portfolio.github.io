@@ -13,7 +13,7 @@
 /* Navbar Styles */
 .navbar {
     width: 100%;
-    background-color: rgba(255, 240, 245, 0.9); /* soft pink pastel, slight transparent */
+    background-color: rgba(204, 224, 254, 0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@
 
 .nav-logo {
     font-size: 1.8rem;
-    color: #5f4b8b;
+    color: #2d319b;
     font-weight: bold;
     text-decoration: none;
 }
@@ -47,7 +47,7 @@
 
 .nav-links a {
     text-decoration: none;
-    color: #5f4b8b;
+    color: #2d319b;
     font-size: 1rem; /* slightly smaller */
     font-weight: bold;
     position: relative;
@@ -75,14 +75,14 @@
 
 
 .nav-links a:hover {
-    color: #79a7d3;
+    color: #6e55a3;
 }
 
 #hero {
     background: linear-gradient(270deg, #e0f7fa, #fef9ff, #ffd6e7, #d7ecfa);
     background-size: 800% 800%;
     animation: gradientMove 15s ease infinite;
-    padding-top: 150px; /* adjust for navbar height */
+    padding-top: 20px; /* adjust for navbar height */
     padding-bottom: 100px;
     min-height: 100vh;
     display: flex;
@@ -108,11 +108,11 @@ body {
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     box-shadow: 0 4px 15px rgba(173, 216, 230, 0.5); /* light shadow */
 }
 
@@ -212,9 +212,10 @@ p {
     opacity: 1;
     transform: none;
 }
+/*
 #skills {
     padding: 80px 20px;
-    background-color: #f9f4ff; /* Very light pastel purple */
+    background-color: #f9f4ff;
 }
 
 #skills h2 {
@@ -232,7 +233,7 @@ p {
 }
 
 .skill-card {
-    background-color: #e0f7fa; /* pastel teal */
+    background-color: #e0f7fa;
     padding: 20px;
     border-radius: 12px;
     font-weight: bold;
@@ -246,13 +247,20 @@ p {
 .skill-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(95, 75, 139, 0.2);
-    background-color: #d7ecfa; /* pastel blue on hover */
+    background-color: #d7ecfa;
 }
 .core-skill {
-    background-color: #ffd6e7; /* Soft pastel pink */
+    background-color: #ffd6e7;
     font-size: 1.1rem;
     border: 2px solid #ffaad4;
-}
+}*/
+
+#skillGraph {
+    background: #fef9ff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+  }
 
 #projects {
     padding: 80px 20px;
@@ -480,17 +488,7 @@ footer {
     padding: 20px 10px;
     font-size: 0.9rem;
 }
-/*
-footer {
-    background-color: #5f4b8b;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    font-size: 0.9rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-*/
+
 /* Scroll to Top Button */
 #scrollToTopBtn {
     position: fixed;
