@@ -128,18 +128,53 @@ const skillNodes = [
   ];
   
   const skillEdges = [
-    // Connect clusters to core nodes
-    { from: 1, to: 13 }, { from: 1, to: 60 }, { from: 1, to: 62 }, { from: 1, to: 63 }, { from: 1, to: 64 },
-    { from: 2, to: 10 }, { from: 2, to: 11 }, { from: 2, to: 12 }, { from: 2, to: 14 },
+    // Python & its ecosystem
+    { from: 1, to: 60 }, // Python to TensorFlow
+    { from: 1, to: 61 }, // Python to Scikit-learn
+    { from: 1, to: 62 }, // Python to Pandas
+    { from: 1, to: 63 }, // Python to NumPy
+    { from: 1, to: 64 }, // Python to Matplotlib
+    { from: 1, to: 33 }, // Python to Web Scraping
+    { from: 1, to: 67 }, // Python to NLTK
+  
+    // AI / ML
+    { from: 5, to: 50 }, { from: 5, to: 51 }, { from: 5, to: 54 }, { from: 5, to: 70 },
+    { from: 5, to: 71 }, { from: 5, to: 72 }, { from: 5, to: 73 }, { from: 5, to: 30 },
+    { from: 5, to: 31 }, { from: 5, to: 32 },
+  
+    // AI → more libraries/tools
+    { from: 6, to: 65 }, // Hugging Face
+    { from: 6, to: 66 }, // OpenCV
+    { from: 6, to: 67 }, // NLTK
+    { from: 6, to: 52 }, // Chatbot Development
+    { from: 6, to: 53 }, // Computer Vision
+    { from: 6, to: 55 }, // LLMs
+  
+    // Data Engineering
+    { from: 2, to: 10 }, // SQL to DBMS
+    { from: 2, to: 11 }, // SQL to NoSQL
+    { from: 2, to: 12 }, // SQL to Snowflake
+    { from: 2, to: 13 }, // SQL to ETL
+    { from: 2, to: 14 }, // SQL to SSIS
+  
+    { from: 1, to: 13 }, // Python to ETL
+    { from: 4, to: 13 }, // Azure to ETL
+    { from: 4, to: 14 }, // Azure to SSIS
+  
+    // Data Viz & BI
     { from: 3, to: 20 }, { from: 3, to: 21 }, { from: 3, to: 22 }, { from: 3, to: 23 },
-    { from: 4, to: 5 }, { from: 4, to: 40 }, { from: 4, to: 41 }, { from: 4, to: 42 },
-    { from: 5, to: 30 }, { from: 5, to: 31 }, { from: 5, to: 32 }, { from: 5, to: 33 },
-    { from: 5, to: 50 }, { from: 5, to: 51 }, { from: 5, to: 54 },
-    { from: 6, to: 50 }, { from: 6, to: 51 }, { from: 6, to: 52 }, { from: 6, to: 53 }, { from: 6, to: 54 }, { from: 6, to: 55 },
-    { from: 6, to: 65 }, { from: 6, to: 66 }, { from: 6, to: 67 },
-    { from: 5, to: 70 }, { from: 5, to: 71 }, { from: 5, to: 72 }, { from: 5, to: 73 },
-    { from: 6, to: 80 }, { from: 6, to: 81 }, { from: 6, to: 82 }, { from: 6, to: 83 }
-  ];
+    { from: 2, to: 3 },   // SQL → Power BI
+    { from: 4, to: 3 },    // Azure → Power BI
+
+    // Cloud
+    { from: 4, to: 40 }, // Azure to AWS
+    { from: 4, to: 41 }, { from: 4, to: 42 }, // Azure to Hadoop/Spark
+    { from: 40, to: 60 }, // AWS to TensorFlow
+    { from: 40, to: 65 }, // AWS to Hugging Face
+  
+    // Business & Strategy
+    { from: 6, to: 80 }, { from: 6, to: 81 }, { from: 6, to: 82 }, { from: 6, to:83 }
+ ];
   
   const container = document.getElementById("skillGraph");
   const data = {
@@ -161,6 +196,26 @@ const skillNodes = [
       smooth: { type: "dynamic" }
     },
     physics: {
+        enabled: true,
+        solver: "barnesHut",
+        barnesHut: {
+          gravitationalConstant: -2000,
+          centralGravity: 0.3,
+          springLength: 150,
+          springConstant: 0.04,
+          damping: 0.09,
+          avoidOverlap: 0.5
+        },
+        stabilization: {
+          iterations: 250
+        }
+      },
+      interaction: {
+        hover: true,
+        tooltipDelay: 150
+      }
+    };
+    /*physics: {
       enabled: true,
       stabilization: { iterations: 200 },
       solver: "forceAtlas2Based"
@@ -169,7 +224,13 @@ const skillNodes = [
       hover: true,
       tooltipDelay: 150
     }
-  };
-  
-  new vis.Network(container, data, options);
-    
+  }; */
+  const network = new vis.Network(container, data, options);
+  network.once("stabilizationIterationsDone", function () {
+    network.fit({
+      animation: {
+        duration: 1000,
+        easingFunction: "easeInOutQuad"
+      }
+    });
+  });

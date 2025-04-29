@@ -256,11 +256,20 @@ p {
 }*/
 
 #skillGraph {
+    height: 800px; /* Increased from 600px */
     background: #fef9ff;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     margin-top: 30px;
   }
+
+  #skillGraph {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  
 
 #projects {
     padding: 80px 20px;
