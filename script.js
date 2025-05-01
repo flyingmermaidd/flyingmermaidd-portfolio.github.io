@@ -56,7 +56,7 @@ window.addEventListener('load', () => {
     loader.style.display = 'none';
 });
 
-
+// Particles
 particlesJS.load('particles-js', 'assets/particles/particles.json', function() {
     console.log('Particles loaded successfully!');
   });
