@@ -241,7 +241,7 @@ p {
     background: linear-gradient(135deg, #ffd6e7, #fef9ff);
     color: #3d3d3d;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     border: 2px solid #ffd6e7;
     transition: all 0.4s ease-in-out;
@@ -267,7 +267,7 @@ p {
   .skill-card.core {
     background: linear-gradient(135deg, #d7ecfa, #fef9ff);
     color: #4b3a60;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     border: 2px solid #bda8ff;
   }
   
