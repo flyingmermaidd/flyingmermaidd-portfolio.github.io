@@ -468,23 +468,44 @@ p {
     color: #555;
 }
 
-/* Badges/Tags */
+/* Badges/Tags
 .badges {
     margin-bottom: 12px;
-    text-align: center; /* Center-aligns badge group */
+    text-align: center;
 }
   
   .badges span {
     display: inline-block;
     background-color: #e0f0ff;
     color: #0a66c2;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 600;
     padding: 5px 10px;
     margin: 4px 6px 4px 0;
     border-radius: 20px;
     border: 1px solid #b3daff;
-  }
+  } */
+   /* Badges/Tags */
+/* Badges/Tags */
+/* Badges/Tags */
+.badges {
+    margin-bottom: 8px;  /* Decrease the bottom margin */
+    text-align: center; /* Center-aligns badge group */
+}
+  
+.badges span {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #0a66c2;
+    font-size: 10px;    /* Decrease font size */
+    font-weight: 600;
+    padding: 3px 6px;   /* Decrease padding */
+    margin: 2px 4px;    /* Decrease margin */
+    border-radius: 15px;  /* Slightly smaller border radius */
+    border: 1px solid #b3daff;
+}
+
+
 
   @media screen and (max-width: 768px) {
     .timeline::after {
@@ -501,12 +522,7 @@ p {
       left: 0;
     }
   }
-  
-#certifications {
-    padding: 80px 20px;
-    background-color: #fff0f5; /* Light pastel pink */
-}
-
+  /*---- */
 .experience-section {
     padding: 2rem 1rem;
   }
@@ -545,7 +561,7 @@ p {
     margin-bottom: 0.5rem;
     line-height: 1.6;
   }
-  
+  /*
   .badges {
     margin-top: 1rem;
   }
@@ -561,6 +577,11 @@ p {
     font-size: 0.85rem;
   }
   
+  /* Certificates */
+  #certifications {
+    padding: 80px 20px;
+    background-color: #fff0f5; /* Light pastel pink */
+}
 
 #certifications h2 {
     color: #5f4b8b;
