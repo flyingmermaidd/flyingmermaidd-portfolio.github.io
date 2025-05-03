@@ -434,7 +434,7 @@ p {
 }
   
 .timeline-date {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: #5f4b8b;
     margin-bottom: 5px;
@@ -458,13 +458,13 @@ p {
 
 .timeline-content h3 {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     color: #79a7d3;
 }
 
 .timeline-content p {
     margin: 0;
-    font-size: 1.00rem;
+    font-size: 0.9rem;
     color: #555;
 }
 
