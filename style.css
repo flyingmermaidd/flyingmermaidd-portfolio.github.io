@@ -385,15 +385,17 @@ p {
     font-size: 0.8rem;
     margin: 5px 5px 0 0;
 }
+
 #experience {
     padding: 80px 20px;
-    background-color: #f2f7ff; /* Light pastel blue */
+    background-color: #ecfaef; /* Light pastel blue */
 }
 
 #experience h2 {
     color: #5f4b8b;
     font-size: 2.2rem;
     margin-bottom: 40px;
+    text-align: center; 
 }
 
 .timeline {
@@ -418,21 +420,27 @@ p {
     padding: 20px 30px;
     position: relative;
     width: 50%;
-}
-
-.timeline-item:nth-child(odd) {
+    box-sizing: border-box;
+  }
+  
+  /* Left side */
+  .timeline-item:nth-child(odd) {
     left: 0;
-}
-
-.timeline-item:nth-child(even) {
+    padding-right: 50px; /* Adds space from the center line */
+  }
+  
+  /* Right side */
+  .timeline-item:nth-child(even) {
     left: 50%;
-}
-
+    padding-left: 50px; /* Adds space from the center line */
+  }
+  
 .timeline-date {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #5f4b8b;
     margin-bottom: 5px;
+    text-align: center; 
 }
 
 .timeline-content {
@@ -442,6 +450,7 @@ p {
     position: relative;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+    text-align: center; /* Center-align all text */
 }
 
 .timeline-content:hover {
@@ -451,7 +460,7 @@ p {
 
 .timeline-content h3 {
     margin-top: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #79a7d3;
 }
 
@@ -461,10 +470,99 @@ p {
     color: #555;
 }
 
+/* Badges/Tags */
+.badges {
+    margin-bottom: 12px;
+    text-align: center; /* Center-aligns badge group */
+}
+  
+  .badges span {
+    display: inline-block;
+    background-color: #e0f0ff;
+    color: #0a66c2;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 4px 6px 4px 0;
+    border-radius: 20px;
+    border: 1px solid #b3daff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .timeline::after {
+      left: 8px;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      padding: 20px 20px 20px 40px;
+    }
+  
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+  }
+  
 #certifications {
     padding: 80px 20px;
     background-color: #fff0f5; /* Light pastel pink */
 }
+
+.experience-section {
+    padding: 2rem 1rem;
+  }
+  
+  .experience-card {
+    background: #fff;
+    border-left: 4px solid #00aaff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  .role-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .role-header .duration {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .experience-card ul {
+    margin-top: 0.5rem;
+    padding-left: 1.25rem;
+  }
+  
+  .experience-card ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .badges {
+    margin-top: 1rem;
+  }
+  
+  .badges span {
+    display: inline-block;
+    background: #f0f4f8;
+    color: #0077b6;
+    border-radius: 5px;
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+  }
+  
 
 #certifications h2 {
     color: #5f4b8b;
