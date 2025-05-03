@@ -419,21 +419,19 @@ p {
 .timeline-item {
     padding: 20px 30px;
     position: relative;
-    width: 50%;
+    width: 60%;
     box-sizing: border-box;
   }
   
-  /* Left side */
   .timeline-item:nth-child(odd) {
-    left: 0;
-    padding-right: 50px; /* Adds space from the center line */
-  }
-  
-  /* Right side */
-  .timeline-item:nth-child(even) {
-    left: 50%;
-    padding-left: 50px; /* Adds space from the center line */
-  }
+    left: calc(50% - 60%); /* Push left card away from center */
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%; /* Right cards stay as is */
+    text-align: left;
+}
   
 .timeline-date {
     font-size: 1rem;
