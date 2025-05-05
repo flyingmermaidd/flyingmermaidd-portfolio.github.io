@@ -386,6 +386,7 @@ p {
     margin: 5px 5px 0 0;
 }
 
+/* Experience */
 #experience {
     padding: 80px 20px;
     background-color: #ecfaef; /* Light pastel blue */
@@ -465,28 +466,9 @@ p {
 .timeline-content p {
     margin: 0;
     font-size: 0.9rem;
-    color: #555;
+    color: #f10606;
 }
 
-/* Badges/Tags
-.badges {
-    margin-bottom: 12px;
-    text-align: center;
-}
-  
-  .badges span {
-    display: inline-block;
-    background-color: #e0f0ff;
-    color: #0a66c2;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 5px 10px;
-    margin: 4px 6px 4px 0;
-    border-radius: 20px;
-    border: 1px solid #b3daff;
-  } */
-   /* Badges/Tags */
-/* Badges/Tags */
 /* Badges/Tags */
 .badges {
     margin-bottom: 8px;  /* Decrease the bottom margin */
@@ -522,7 +504,7 @@ p {
       left: 0;
     }
   }
-  /*---- */
+  /*
 .experience-section {
     padding: 2rem 1rem;
   }
@@ -550,7 +532,7 @@ p {
   .role-header .duration {
     font-size: 0.95rem;
     color: #666;
-  }
+  } 
   
   .experience-card ul {
     margin-top: 0.5rem;
@@ -560,7 +542,7 @@ p {
   .experience-card ul li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
-  }
+  } */
   /*
   .badges {
     margin-top: 1rem;
